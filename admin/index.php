@@ -35,7 +35,7 @@
 				<span class="login100-form-title p-b-41">
 					Admin Login
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5">
+				<form class="login100-form validate-form p-b-33 p-t-5" method="post" action="" name="login">
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" placeholder="User name">
@@ -48,9 +48,7 @@
 					</div>
 
 					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
-							Login
-						</button>
+				       <input type="submit"  class="login100-form-btn" value="LOGIN"/>
 					</div>
 
 				</form>
