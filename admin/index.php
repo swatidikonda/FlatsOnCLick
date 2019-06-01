@@ -1,4 +1,50 @@
+<?php
+include "connection.php";
+include "userClass.php";
+$userClass = new userClass();
+$errorMsgReg='';
+$errorMsgLogin='';
+$uid="";
+
+
+/* Login Form */
+if (!empty($_POST['loginSubmit']))
+{
+
+ $usernameEmail=$_POST['username'];
+ $password=$_POST['password'];
+if(strlen(trim($usernameEmail))>1 && strlen(trim($password))>1 )
+{
+
+	$uid=$userClass->userLogin($usernameEmail,$password);
+
+/*if($uid=="2")
+{
+$url=$_SERVER['DOCUMENT_ROOT']."/universal_home.php";
+header("Location: $url"); // Page redirecting to home.php
+}
+else if($uid=="1"){
+	$url=$_SERVER['DOCUMENT_ROOT']."/universal_home.php";
+header("Location: $url"); // Page redirecting to home.php
+}
+else if($uid=="3"){
+	$url=$_SERVER['DOCUMENT_ROOT']."/dr_panel/dr_home.php";
+header("Location: $url"); // Page redirecting to home.php
+}*/
+/* else
+{
+$errorMsgLogin="Please check login details.";
+} */
+}
+}
+?>
+<?php
+ob_start ();
+
+//$_SESSION['id']="sadasdasds";
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<title>Admin Login</title>
@@ -43,12 +89,12 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
 					<div class="container-login100-form-btn m-t-32">
-				       <input type="submit"  class="login100-form-btn" value="LOGIN"/>
+				       <input type="submit" name="loginSubmit"  class="login100-form-btn" value="LOGIN"/>
 					</div>
 
 				</form>
@@ -75,6 +121,11 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+<?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+	$url=BASE_URL.'adminpanel.php';
+		header("Location: $url");
+	die();
+}
+?>
 </body>
 </html>
