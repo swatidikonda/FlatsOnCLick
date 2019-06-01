@@ -1,3 +1,27 @@
+<?php
+include "connection.php";
+include "userClass.php";
+$userClass = new userClass();
+$errorMsgReg='';
+$errorMsgLogin='';
+$uid="";
+
+
+/* Login Form */
+if (!empty($_POST['loginSubmit']))
+{
+
+ $usernameEmail=$_POST['username'];
+ $password=$_POST['password'];
+if(strlen(trim($usernameEmail))>1 && strlen(trim($password))>1 )
+{
+
+	$uid=$userClass->userLogin($usernameEmail,$password);
+
+
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,20 +58,21 @@
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
 					<span class="login100-form-title-1">
-						Sign In
+						Sign In 
+
 					</span>
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" action="" name="login">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Enter username">
+						<input class="input100" type="text" name="username" placeholder="Enter username"/>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Enter password"/>
 						<span class="focus-input100"></span>
 					</div>
 
@@ -66,16 +91,25 @@
 						</div>
 					</div>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
+					<div class="container-login100-form-btn">						
+						<input type="submit" class="login100-form-btn" name="loginSubmit" value="login"/>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	
+	<?php
+ob_start ();
+
+//$_SESSION['id']="sadasdasds";
+?>
+<?php if (isset($_SESSION['loggedincl']) && $_SESSION['loggedincl'] == true) {
+	echo "reached here";
+	$url=BASE_URL.'adminpanel.php';
+		header("Location: $url");
+	die();
+}
+?>
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -92,6 +126,8 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
+
 
 </body>
 </html>

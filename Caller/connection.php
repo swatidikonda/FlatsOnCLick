@@ -5,7 +5,7 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_DATABASE', 'flatsonclick');
-define("BASE_URL", "http://localhost/admin/");  // Eg. http://yourwebsite.com
+define("BASE_URL", "http://localhost/caller/");  // Eg. http://yourwebsite.com
 
 
 function getDB()
@@ -24,7 +24,5 @@ return $dbConnection;
 catch (PDOException $e) {
 echo 'Connection failed: ' . $e->getMessage();
 }
-
 }
-
 ?>
