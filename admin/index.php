@@ -122,7 +122,7 @@ ob_start ();
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-	$url=BASE_URL.'adminpanel.php';
+	$url=BASE_URL.'admin_panel.php';
 		header("Location: $url");
 	die();
 }
