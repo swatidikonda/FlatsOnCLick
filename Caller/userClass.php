@@ -8,7 +8,7 @@ public function userLogin($usernameEmail,$password)
         {
          $db = getDB();
 				 $hash_password= md5($password); /*Password encryption */
-				 $stmt = $db->prepare("SELECT * FROM admin_login WHERE username=:username AND password=:hash_password");
+				 $stmt = $db->prepare("SELECT * FROM telecaller_login WHERE username=:username AND password=:hash_password");
 				 $stmt->bindParam("username",$usernameEmail);
 				 $stmt->bindParam("hash_password",$hash_password);
 				 $stmt->execute();
