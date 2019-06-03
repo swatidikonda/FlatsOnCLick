@@ -59,7 +59,7 @@ ob_start ();
 					<div class="banner_content">
 						<h5>The joy of home owning</h5>
 						<h3>Find Your New Home</h3>
-						<a class="main_btn" href="#">Learn More</a>
+						<a class="main_btn" href="#" style="background: #adc867; border:#adc867;">Learn More</a>
 					</div>
 				</div>
             </div>
@@ -73,7 +73,7 @@ ob_start ();
                     <div>
                             <input type="password" id="password" name="password"  class="form-control" placeholder="Password">
                            
-                            <input type="submit" name="loginSubmit" class="btn submit_btn" value="LOGIN">
+                            <input type="submit" style="background: #adc867; border:#adc867;" name="loginSubmit" class="btn submit_btn" value="LOGIN">
 
                     </div>
                          <br>
@@ -174,7 +174,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="js/mail-script.js"></script>
         <script src="js/theme.js"></script>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    $url=   'adminpanel.php';
+    $url=  BASE_URL.'sales/home.php';
         header("Location: $url");
     die();
 }
