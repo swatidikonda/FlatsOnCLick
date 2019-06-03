@@ -18,23 +18,7 @@ if(strlen(trim($usernameEmail))>1 && strlen(trim($password))>1 )
 
 	$uid=$userClass->userLogin($usernameEmail,$password);
 
-/*if($uid=="2")
-{
-$url=$_SERVER['DOCUMENT_ROOT']."/universal_home.php";
-header("Location: $url"); // Page redirecting to home.php
-}
-else if($uid=="1"){
-	$url=$_SERVER['DOCUMENT_ROOT']."/universal_home.php";
-header("Location: $url"); // Page redirecting to home.php
-}
-else if($uid=="3"){
-	$url=$_SERVER['DOCUMENT_ROOT']."/dr_panel/dr_home.php";
-header("Location: $url"); // Page redirecting to home.php
-}*/
-/* else
-{
-$errorMsgLogin="Please check login details.";
-} */
+
 }
 }
 ?>
@@ -122,7 +106,7 @@ ob_start ();
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-	$url=BASE_URL.'admin_panel.php';
+	$url=	'adminpanel.php';
 		header("Location: $url");
 	die();
 }
