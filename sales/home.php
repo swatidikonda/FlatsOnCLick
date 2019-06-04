@@ -30,19 +30,41 @@
 			<div class="logo"><a href="#">Flats<span>OnClick</span></a></div>
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start">
-				
+				 <li><div ><a href="#">Customer Login</a></div></li>
+				 <li><div ><a href="#">Featured Properties</a></div></li>
+				 <li><div ><a href="#">The Best Deals</a></div></li>
+				 
 				</ul>
 			</nav>
-			<div class="submit ml-auto"><a href="#">Customer Login</a></div>
+			
+			<div class="submit ml-auto"><a href="#"> LogOut</a></div>
 			<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 		</div>
 
 	</header>
 
 	<!-- Menu -->
+	<div class="menu text-right">
+		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		<div class="menu_log_reg">
+			<div class="log_reg d-flex flex-row align-items-center justify-content-end">
+				<ul class="d-flex flex-row align-items-start justify-content-start">
+					
+				</ul>
+			</div>
+			<nav class="menu_nav">
+				<ul>
+					<li><a href="index.html">LogOut</a></li>
+					<li><a href="about.html">Customer Login</a></li>
+				
+				</ul>
+			</nav>
+		</div>
+	</div>
+
 
 	<!-- Home -->
-
+     <div class="container-fluid">
 	<div class="home">
 		
 		<!-- Home Slider -->
@@ -100,19 +122,19 @@
 			 
 		</div>
 	</div>
-
+   </div>
 	<!-- Search -->
 
 	<div class="search">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="search_container">
-						<div class="search_form_container">
-							<form action="#" class="search_form" id="search_form">
-								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_inputs d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<div class="container">
+	<div class="container-fluid">
+		<div class="row">
+		 <div class="col">
+			<div class="search_container">
+				<div class="search_form_container">
+					<form action="#" class="search_form" id="search_form">
+					<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+					 <div class="search_inputs d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+			<div class="container">
 				<div class="advanced_search">
 					<h3>Search Properties for</h3>
 					<div class="search_select">
@@ -180,7 +202,7 @@
 								width: 23px;
 								height: 24px;
 								border: 0;
-								background: url('contrasticon.png');
+								background:#adc867;
 								cursor: pointer;
 								}
 
@@ -188,7 +210,7 @@
 								width: 23px;
 								height: 24px;
 								border: 0;
-								background: url('contrasticon.png');
+								background:#f5204b;
 								cursor: pointer;
 								}
 					  </style> 
@@ -201,36 +223,21 @@
                        slider.oninput = function() {
                       output.innerHTML = this.value;
 					  }
-					  var slider = document.getElementById("myRange1");
-                      var output = document.getElementById("demo1");
-                     output.innerHTML = slider.value;
+					  var slider1 = document.getElementById("myRange1");
+                      var output1 = document.getElementById("demo1");
+                     output1.innerHTML = slider1.value;
 
-                       slider.oninput = function() {
-                      output.innerHTML = this.value;
+                       slider1.oninput = function() {
+                      output1.innerHTML = this.value;
                       }
                      
 					 </script>
 					 
-<!--                    
-					<div class="search_range">
-						<div class="range_item">
-							<h5>Price Range</h5>
-							<div id="slider-range"></div>
-							<span class="d_text">$200</span>
-							<input type="text" id="amount" readonly style="border:0;" class="amount">
-						</div>
-						<div class="range_item">
-							<h5>property Area</h5>
-							<div id="slider-range2"></div>
-							<span class="d_text2">50sqm</span>
-							<input type="text" id="amount2" readonly style="border:0;" class="amount2">
-						</div> -->
 					</div>
 					<button type="submit" value="submit" class="btn submit_btn slider_button">Search Property</button>
 				</div>
-            </div>	
-									
-
+            </div>									
+  
 									</div>
 								</div>
 							</form>
