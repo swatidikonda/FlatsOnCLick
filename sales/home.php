@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
 </head>
 <body>
 
@@ -55,10 +56,7 @@
 			 			<div class="container">
 			 				<div class="row">
 			 					<div class="col">
-			 						<div class="home_content">
-			 							<div class="home_title"><h1>1243 Main Avenue Left Town</h1></div>
-			 							<div class="home_price_tag">$ 482 900</div>
-			 						</div>
+			 						
 			 					</div>
 			 				</div>
 			 			</div>
@@ -72,9 +70,7 @@
 			 			<div class="container">
 			 				<div class="row">
 			 					<div class="col">
-			 						<div class="home_content">
-			 							<div class="home_title"><h1>1243 Main Avenue Left Town</h1></div>
-			 							<div class="home_price_tag">$ 482 900</div>
+			 						
 			 						</div>
 			 					</div>
 			 				</div>
@@ -89,9 +85,7 @@
 			 			<div class="container">
 			 				<div class="row">
 			 					<div class="col">
-			 						<div class="home_content">
-			 							<div class="home_title"><h1>1243 Main Avenue Left Town</h1></div>
-			 							<div class="home_price_tag">$ 482 900</div>
+			 						
 			 						</div>
 			 					</div>
 			 				</div>
@@ -114,34 +108,130 @@
 			<div class="row">
 				<div class="col">
 					<div class="search_container">
-						<div class="search_title">Find your home</div>
 						<div class="search_form_container">
 							<form action="#" class="search_form" id="search_form">
 								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_inputs d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<select class="search_input">
-									    <option value="" disabled selected>Property Type</option>
-										<option value="volvo">Volvo</option>
-										<option value="saab">Saab</option>
-										<option value="mercedes">Mercedes</option>
-										<option value="audi">Audi</option>
-									</select>
-								    <select class="search_input">
-									    <option value="" disabled selected>budget</option>
-										<option value="volvo">Volvo</option>
-										<option value="saab">Saab</option>
-										<option value="mercedes">Mercedes</option>
-										<option value="audi">Audi</option>
-									</select>
-									<select class="search_input">
-									    <option value="" disabled selected>Location</option>
-										<option value="volvo">Volvo</option>
-										<option value="saab">Saab</option>
-										<option value="mercedes">Mercedes</option>
-										<option value="audi">Audi</option>
-									</select>						
+									<div class="container">
+				<div class="advanced_search">
+					<h3>Search Properties for</h3>
+					<div class="search_select">
+						<select class="s_select form-control">
+							<option value="1">Choose Locations</option>
+							<option value="2">Property Type</option>
+							<option value="4">Bedrooms</option>
+						</select>
+						<select class="s_select form-control">
+							<option value="1">Property Type</option>
+							<option value="2">Choose Locations</option>
+							<option value="4">Bedrooms</option>
+						</select>
+						<select class="s_select form-control">
+							<option value="1">Bedrooms</option>
+							<option value="2">Property Type</option>
+							<option value="4">Choose Locations</option>
+						</select>
+						<select class="s_select form-control">
+							<option value="1">Bathrooms</option>
+							<option value="2">Property Type</option>
+							<option value="4">Bedrooms</option>
+						</select>
+					</div>
+					  
+					   <div class="slidecontainer">
+					   <div class="range_item">
+							<h5>Price Range</h5>
+                       </div> 		 
+                       <input type="range" min="1" max="1000000000" value="100000" class="slider" id="myRange">
+                       <p>Price Range: <span id="demo"></span></p>
+					   </div>
+					   
+					   <div class="slidecontainer">
+					   <div class="range_item">
+							<h5>property Area</h5>
+                       </div> 		 
+                       <input type="range" min="1" max="1000000000" value="100000" class="slider" id="myRange1">
+                       <p>Price Range: <span id="demo1"></span></p>
+					   </div>
+					          <style>
+						           .slidecontainer {
+                                     width: 100%;
+                                          }
+
+									.slider {
+									-webkit-appearance: none;
+									width: 100%;
+									height: 10px;
+									border-radius: 5px;
+									background: #d3d3d3;
+									outline: none;
+									opacity: 0.7;
+									-webkit-transition: .2s;
+									transition: opacity .2s;
+									}
+
+								.slider:hover {
+								opacity: 1;
+								}
+
+								.slider::-webkit-slider-thumb {
+								-webkit-appearance: none;
+								appearance: none;
+								width: 23px;
+								height: 24px;
+								border: 0;
+								background: url('contrasticon.png');
+								cursor: pointer;
+								}
+
+								.slider::-moz-range-thumb {
+								width: 23px;
+								height: 24px;
+								border: 0;
+								background: url('contrasticon.png');
+								cursor: pointer;
+								}
+					  </style> 
+					 <script type="text/javascript">  
+
+					 var slider = document.getElementById("myRange");
+                      var output = document.getElementById("demo");
+                     output.innerHTML = slider.value;
+
+                       slider.oninput = function() {
+                      output.innerHTML = this.value;
+					  }
+					  var slider = document.getElementById("myRange1");
+                      var output = document.getElementById("demo1");
+                     output.innerHTML = slider.value;
+
+                       slider.oninput = function() {
+                      output.innerHTML = this.value;
+                      }
+                     
+					 </script>
+					 
+<!--                    
+					<div class="search_range">
+						<div class="range_item">
+							<h5>Price Range</h5>
+							<div id="slider-range"></div>
+							<span class="d_text">$200</span>
+							<input type="text" id="amount" readonly style="border:0;" class="amount">
+						</div>
+						<div class="range_item">
+							<h5>property Area</h5>
+							<div id="slider-range2"></div>
+							<span class="d_text2">50sqm</span>
+							<input type="text" id="amount2" readonly style="border:0;" class="amount2">
+						</div> -->
+					</div>
+					<button type="submit" value="submit" class="btn submit_btn slider_button">Search Property</button>
+				</div>
+            </div>	
+									
+
 									</div>
-									<button class="search_button">submit listing</button>
 								</div>
 							</form>
 						</div>

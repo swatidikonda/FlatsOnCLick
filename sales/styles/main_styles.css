@@ -687,6 +687,23 @@ section
 	margin-top: 10px;
 	margin-left: 4px;
 }
+
+.range_item h5{
+	color: #FFFFFF;
+	margin-top:20px; 
+	text-align: left;
+}
+.range_item{
+	color: #FFFFFF;
+	
+	
+
+}
+.slider_button{
+	margin-top: 20px;
+	color: white;
+	background: #adc867;
+}
 .home_slider_nav
 {
 	position: absolute;
@@ -727,7 +744,29 @@ section
 }
 .search_container
 {
-	margin-top: -198px;
+	margin-top: -588px;
+	width: 50%;
+	height:90%;
+	text-align: center;
+}
+.advanced_search  h3 {
+ color: white;
+ font-size: 18px;
+ font-weight: 500;
+ text-align: center;
+}
+
+.search_select {
+  margin-top:30px; 
+
+
+}
+.s_select{
+	margin-top:20px; 
+	width: 100%;
+	color: #110a1f
+
+
 }
 .search_title
 {
@@ -750,75 +789,6 @@ section
 	padding-right: 24px;
 	background: rgba(85,64,125,0.67);
 }
-.search_inputs
-{
-	width: calc(100% - 260px);
-}
-.search_button
-{
-	width: 247px;
-	height: 51px;
-	background: #adc867;
-	color: #ffffff;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	font-size: 14px;
-	font-weight: 500;
-	text-transform: uppercase;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.search_button:hover
-{
-	border: solid 2px #ffffff;
-}
-.search_input
-{
-	width: calc((100% - 22px) / 3);
-	height: 51px;
-	padding-left: 27px;
-	background: #ffffff;
-	border: none;
-	outline: none;
-	font-size: 16px;
-	font-weight: 500;
-	color: #2b2e35;
-}
-.search_input::-webkit-input-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	color: #2b2e35 !important;
-}
-.search_input:-moz-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	color: #2b2e35 !important;
-}
-.search_input::-moz-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	color: #2b2e35 !important;
-} 
-.search_input:-ms-input-placeholder
-{ 
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	color: #2b2e35 !important;
-}
-.search_input::input-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	color: #2b2e35 !important;
-}
-
 /*********************************
 7. Featured
 *********************************/
